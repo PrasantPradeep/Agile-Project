@@ -1,0 +1,34 @@
+{%include 'user_header.html'%}
+<section id="hero" class="d-flex align-items-center" style="height: 1000px;   background: url('/static/assets/img/hero-img2.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+    <table   align="center" style="text-align: center; backdrop-filter: blur(200px); margin-top: -500px;">
+    <tr>
+        <th>Meditation</th>
+        <th>Details</th>
+        <th>Place</th>
+        <th>Date</th>
+    </tr>
+    {%for row in obj%}
+    <tr>
+        <td>{{row.meditation.first_name}} {{row.meditation.first_name}}</td>
+        <td>{{row.details}}</td>
+        <td>{{row.place}}</td>
+        <td>{{row.date}}</td>
+    </tr>
+    {%endfor%}
+</table>
+</center>
+<style>
+    th{
+        padding: 15px;
+        color: black;
+    }
+    TD{
+        color: white;
+        padding: 15px;
+    }
+</style>
+
+</section>
+
+{%include 'footer.html'%}

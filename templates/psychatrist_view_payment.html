@@ -1,0 +1,28 @@
+{%include 'psychatrist_header.html'%}
+<section id="hero" class="d-flex align-items-center" style="height: 1000px;   background: url('/static/assets/img/hero-img2.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+    <table   align="center" style="text-align: center; backdrop-filter: blur(100px); margin-top: -500px;">
+    
+    <tr>
+        <th>Amount</th>
+        <th>Date</th>
+    </tr>
+    {%for row in obj%}
+    <tr>
+        <td>{{row.amount}}</td>
+        <td>{{row.date}}</td>
+    </tr>
+    {%endfor%}
+</table>
+</section>
+<style>
+    th,td{
+        padding: 15px;
+        color: rgb(255, 255, 255);
+    }
+    th{
+        color: black;
+    }
+</style>
+
+{%include 'footer.html'%}

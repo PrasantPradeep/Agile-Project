@@ -1,0 +1,37 @@
+{%include 'psychatrist_header.html'%}
+
+<section id="hero" class="d-flex align-items-center" style="height: 1000px;   background: url('/static/assets/img/hero-img2.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+    <table   align="center" style="text-align: center; backdrop-filter: blur(200px); margin-top: -500px;">
+    <tr>
+        <th>Name</th>
+        <th>Details</th>
+        <th>Date</th>
+        <th>Status</th>
+    </tr>
+    {%for row in obj%}
+    <tr>
+        <td>{{row.user.first_name}} {{row.user.last_name}}</td>
+        <td>{{row.details}}</td>
+        <td>{{row.date}}</td>
+        <td>{{row.status}}</td>
+        <td><a href="/psychatrist_update_condition/{{row.appointment_id}}" class="btn btn-info">Update Conditions</a></td>
+        <td><a href="/psychatrist_suggest_treatment/{{row.appointment_id}}" class="btn btn-primary">Suggest Treatment</a></td>
+        <td><a href="/psychatrist_view_payment/{{row.appointment_id}}" class="btn btn-primary">View Payment</a></td>
+
+        
+    </tr>
+    {%endfor%}
+</table>
+<style>
+    th,td{
+        padding: 15px;
+        color: black;
+    }
+    td{
+        color: white;
+    }
+</style>
+</section>
+
+{%include 'footer.html'%}

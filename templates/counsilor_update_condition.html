@@ -1,0 +1,48 @@
+{%include 'counsilor_header.html'%}
+
+<section id="hero" class="d-flex align-items-center" style="height: 1000px;   background: url('/static/assets/img/hero-img2.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+    <div class="container">
+        <center>
+<form action="" method="post">
+    <table align="center" style="text-align: center; backdrop-filter: blur(10px); margin-top: -200px;">
+        <tr>
+            <th style="font-size: 25px;">Details :</th>
+            <td><input type="text" class="form-control" name="details"></td>
+        </tr>
+        <td><input type="submit" name="submit" class="btn btn-info" value="submit"></td>
+    </table>
+</form>
+</center>
+
+
+<center>
+<table class="table table-info table-stripped" style="text-align: center; backdrop-filter: blur(10px); margin-top: 200px;" >
+    <tr>
+        <th>Details</th>
+        <th>Date</th>
+    </tr>
+    {%for row in obj%}
+    <tr>
+        <td>{{row.details}}</td>
+        <td>{{row.date}}</td>
+    </tr>
+    {%endfor%}
+</table>
+</center>
+</div>
+</section>
+<style>
+
+    /* body{
+        background-color: lightblue;
+    } */
+    th,td{
+        padding: 15px;
+    }
+    th,td{
+        color: rgb(8, 5, 5);
+    }
+</style>
+</center>
+{%include 'footer.html'%}

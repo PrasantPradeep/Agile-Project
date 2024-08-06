@@ -1,0 +1,40 @@
+{%include 'admin_header.html'%}
+
+
+<section id="hero" class="d-flex align-items-center" style="height: 1000px;   background: url('/static/assets/img/hero-img13.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+    <table   align="center" style="text-align: center; backdrop-filter: blur(100px); margin-top: 10px;">
+    
+        
+                <tr>
+                    <th>Feedback</th>
+                    <th>Date</th>
+                </tr>
+                {% for row in obj %}
+                <tr>
+                    <td>{{ row.feedback }}</td>
+                    <td>{{ row.date }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <style>
+                th,
+                td {
+                    padding: 15px;
+                
+                }
+            th{
+                font-size: 25px;
+                color: white;
+            }
+                
+                td {
+                    color: black;
+                }
+             
+            </style>
+       
+        </section>
+    </div>
+
+{%include 'footer.html'%}

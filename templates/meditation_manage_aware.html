@@ -1,0 +1,52 @@
+{%include 'meditation_header.html'%}
+<section id="hero" class="d-flex align-items-center" style="height: 1000px;   background: url('/static/assets/img/hero-img2.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+    <div class="container">
+        <center>
+<form action="" method="post">
+    <table   align="center" style="text-align: center; backdrop-filter: blur(800px); margin-top: -250px;">
+
+        <tr>
+            <th style="font-size: 25px;">Details</th>
+            <td><input type="text" class="form-control" name="details"></td>
+        </tr>
+        <tr>
+            <th style="font-size: 25px;">Place</th>
+            <td><input type="text" class="form-control" name="place"></td>
+        </tr>
+        <tr>
+            <th style="font-size: 25px;">Date</th>
+            <td><input type="date" class="form-control" name="date"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="submit" name="submit" class="btn btn-primary"></td>
+        </tr>
+    </table>
+</form>
+
+</center>
+
+<table  class="table table-primary table-stripped" style="margin-top: 200px;">
+    <tr>
+        <th>Details</th>
+        <th>Place</th>
+        <th>Date</th>
+    </tr>
+    {%for row in obj%}
+    <tr>
+        <td>{{row.details}}</td>
+        <td>{{row.place}}</td>
+        <td>{{row.date}}</td>
+    </tr>
+    {%endfor%}
+</table>
+</div>
+</section>
+<style>
+    
+    th,td{
+        padding: 15px;
+        color: black;
+    }
+</style>
+{%include 'footer.html'%}

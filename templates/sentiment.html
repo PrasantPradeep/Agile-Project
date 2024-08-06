@@ -1,0 +1,59 @@
+
+
+{% include 'user_header.html'%}
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('static/assets/img/ooo.png');">
+        <div class="container position-relative d-flex flex-column align-items-center">
+            <div class="container">
+                <div class="row">
+                    <h2 data-aos="fade-up">About Doctors</h2>
+                    <blockquote data-aos="fade-up" data-aos-delay="100">
+                        <p style="text-align: justify; color: aliceblue;">Make appointment after knowing about doctors.</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <main id="main">
+  <!--service-->
+  <form action="/predictSentiment" method="POST">
+  <section id="service" class="section-padding">
+    <div class="container">
+
+      <div class="row">
+          <div class="col-sm-12">
+              <h2 class="ser-title">Take a Test</h2>
+              <br>
+          </div>
+      </div><!--End of  row-->
+
+        <form action="/predictSentiment" method="POST">
+        <div class="row">
+            <div class="col-md-8 col-sm-8">
+              <div class="md-form">
+                    <h5>Write something about how do you feel.</h5>
+                    <textarea  required="required" id="form10" name="form10" class="md-textarea form-control" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+            </div>
+        </div><!--End of row-->
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <br>
+                <button class="btn btn-primary" type="submit" >See Result</button>
+            </div>
+        </div>
+        </form><!--End of form-->
+
+    </div>
+  </section>
+</form>
+  
+
+  </body> 
+  {% include 'footer.html'%}
+ 

@@ -1,0 +1,39 @@
+{%include 'admin_header.html'%}
+<section id="hero" class="d-flex align-items-center" style="height: 1000px;    background: url('/static/assets/img/hero-img2.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+<form action="" method="post">
+    <table align="center" style="text-align: center; backdrop-filter: blur(10px); margin-top: -300px; font-size: 30px;">
+        <tr>
+            <th>Details : </th>
+            <td><input type="text" name="details"></td>
+        </tr>
+        <tr>
+            <th>Amount : </th>
+            <td><input type="text" name="amount" ></td>
+        </tr>
+        <tr>
+            <th>Appointment Date : </th>
+            <td><input type="datetime-local" name="dat" ></td>
+        </tr>
+       
+        <tr>
+            <td><input type="submit" name="submit" value="submit" class="btn btn-info"></td>
+        </tr>
+    </table>
+</form>
+
+</div>
+</section>
+
+<style>
+    th,td{
+        padding: 15px;
+    }
+    th,td{
+        color: black;
+    }
+</style>
+
+
+
+{%include 'footer.html'%}

@@ -1,0 +1,44 @@
+{%include 'user_header.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="hero" class="d-flex align-items-center" style="height: 1000px;   background: url('/static/assets/img/hero-img2.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+        <table   align="center" style="text-align: center; backdrop-filter: blur(200px); margin-top: -500px;">
+        <tr>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+        {% for i in pd %}
+        <tr>
+            <td>{{i.amount}}</td>
+            <td>{{i.date}}</td>
+            <td><a href="/invoice/{{i.amount}}/{{i.date}}" style="color:black;   font-size: 25px;">Generate Invoice</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+
+
+</section>
+
+
+<style>
+    th,td{
+        padding: 15px;
+    }
+    th{
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        text-decoration: underline;
+      
+        
+    }
+    td{
+        color: white;
+    }
+</style>
